@@ -4,7 +4,7 @@
       "type": "image-banner",
       "settings": {
         "heading": "See clearly. Look sharp.",
-        "cta_label": "Shop new arrivals",
+        "cta_label": "Shop new arrivals"
       }
     },
     "recommendations": {
@@ -12,6 +12,7 @@
       "settings": {
         "heading": "You may also like"
       }
+    }
   },
-  "order": ["hero", "recommendations"]
+  "order": ["hero", "featured", "recommendations"]
 }
