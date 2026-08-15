@@ -1,0 +1,8 @@
+<nav class="header-nav">
+  <ul>
+    {% for link in linklist.links %}
+      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <a class="header-nav__cart" href="{{ routes.cart_url }}">Cart ({{ cart.item_count }})</a>
+</nav>
