@@ -1,7 +1,11 @@
 <footer class="site-footer">
-  <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}</p>
-</footer>
+  <div class="footer-cols">
+    {% for block in section.blocks %}
+      <div class="footer-col">
+        <h4>{{ block.settings.heading }}</h4>
+        <p>{{ block.settings.body }}</p>
+      </div>
+  </div>
 
-{% schema %}
-{ "name": "Footer", "settings": [] }
-{% endschema %}
+  <p class="copy">&copy; {{ 'now' | date: '%Y' }} Lumina Eyewear</p>
+</footer>
