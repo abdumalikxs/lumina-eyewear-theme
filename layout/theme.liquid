@@ -1,18 +1,7 @@
-<!doctype html>
-<html lang="{{ request.locale.iso_code }}">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page_title }}</title>
-    {{ content_for_header }}
-  </head>
-  <body>
     <header class="site-header">
       {% if section.settings.show_announcement %}
         <div class="announcement">{{ section.settings.announcement_text }}</div>
+      {% endif %}
 
-      {% render 'header-nav' %}
+      {% render 'header-nav', linklist: linklists.main-menu %}
     </header>
-
-    <main>{{ content_for_layout }}</main>
-  </body>
-</html>
