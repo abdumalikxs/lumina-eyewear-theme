@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }} &ndash; {{ shop.name }}</title>
+    {{ content_for_header }}
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+  </head>
+  <body class="template-{{ request.page_type }}">
+    <header class="site-header">
+      {% if section.settings.show_announcement %}
+        <div class="announcement">{{ section.settings.announcement_text }}</div>
+
+      {% render 'header-nav', linklist: linklists.main-menu %}
+    </header>
+
+    <main id="MainContent">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+  </body>
+</html>
