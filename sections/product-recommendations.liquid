@@ -1,0 +1,23 @@
+<section class="recommendations" data-section-id="{{ section.id }}">
+  <h2 class="recommendations__title">{{ section.settings.heading }}</h2>
+  <ul class="recommendations__grid">
+    {% for product in recommendations.products %}
+      <li class="card">
+        <a href="{{ product.url }}">
+          {{ product.featured_image | image_url: width: 600 | image_tag: alt: product.title }}
+          <p class="card__title">{{ product.title }}</p>
+          <p class="card__price">{{ product.price | money }}</p>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% schema %}
+{
+  "name": "Product recommendations",
+  "settings": [
+    { "id": "heading", "type": "text", "label": "Heading", "default": "You may also like" }
+  ]
+}
+{% endschema %}
