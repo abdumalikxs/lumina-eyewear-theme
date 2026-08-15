@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "hero": {
+      "type": "image-banner",
+      "settings": {
+        "heading": "See clearly. Look sharp.",
+        "subheading": "Handmade acetate and titanium frames.",
+        "cta_label": "Shop new arrivals",
+      }
+    },
+    "featured": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "mens-frames",
+        "products_to_show": 6
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like"
+      }
+  },
+  "order": ["hero", "featured", "recommendations"]
+}
